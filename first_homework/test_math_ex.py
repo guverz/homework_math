@@ -48,12 +48,29 @@ def test_codirect_vectors():
     res = me.codirect_vectors(v1,v2)
     assert res == exp
 
+def test_codirect_almost_vectors():
+    v1 = [2, 4, 6, 8.2]
+    v2 = [4, 8, 12, 16]
+    e = 0.0001
+    exp = True
+    res = me.codirect_almost_vectors(v1, v2, e)
+    assert res == exp 
+
+
 def test_oppos_vectors():
     v1 = [2, 4, 6, 8]
     v2 = [-4, -8, -12, -16]
     exp = True
     res = me.oppos_vectors(v1,v2)
     assert res == exp
+
+def test_oppos_almost_vectors():
+    v1 = [-2, -4, -6, -8.2]
+    v2 = [4, 8, 12, 16]
+    e = 0.0001
+    exp = True
+    res = me.oppos_almost_vectors(v1, v2, e)
+    assert res == exp 
 
 def test_vectors_equality():
     v1 = [2, 4, 6, 8]

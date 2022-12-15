@@ -40,8 +40,14 @@ def vector_collin(v1, v2): #Коллинеарность векторов
 def codirect_vectors(v1, v2): #Сонаправленные вектора
     return cos_between_vectors(v1,v2) == 1
 
+def codirect_almost_vectors(v1, v2, e): #Сонаправленные вектора c погрешностью 
+    return abs(cos_between_vectors(v1,v2) - 1) <= e
+
 def oppos_vectors(v1, v2): #Противоположнонаправленные вектора
     return cos_between_vectors(v1,v2) == -1
+
+def oppos_almost_vectors(v1, v2, e): #Противоположнонаправленные вектора с погрешностью
+    return abs(cos_between_vectors(v1,v2) + 1) <= e
 
 def vectors_equality(v1, v2): #Равенство векторов
     k = 0 
