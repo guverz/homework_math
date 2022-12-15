@@ -114,3 +114,11 @@ def test_vector_projection_vectors():
     exp = [4, 0]
     res = me.vector_projection_vectors(v1,v2)
     assert res == exp
+
+def test_vector_almost_equality():
+    v1 = [2.1, 0.9]
+    v2 = [2.3, 0.9]
+    e = 0.2
+    exp = True
+    res = me.vector_almost_equality(v1, v2, e)
+    assert res == exp
