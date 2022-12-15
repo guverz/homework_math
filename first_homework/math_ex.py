@@ -89,10 +89,10 @@ def vector_projection_vectors(v1, v2): #Векторная проекция ве
         end.append(b)
     return end
 
-def skal_almost_equality(v1, v2, e):
+def skal_almost_equality(v1, v2, e): #Равенство скаляров с погрешностью
     return abs(v1 - v2) <= e
 
-def vector_almost_equality(v1, v2, e):
+def vector_almost_equality(v1, v2, e): #Равенство векторов с погрешностью
     same = [skal_almost_equality(vv1, vv2, e) for vv1, vv2 in zip(v1, v2)]
     return False not in same
 
